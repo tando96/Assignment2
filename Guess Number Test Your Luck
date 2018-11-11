@@ -6,7 +6,7 @@
 
 <div id = "message">Welcome to mini game guessing</div>
 
-<input id = "number">
+<input type = "number" id = "number">
 
 <button id="guessButoon"> Guess </button>
 
