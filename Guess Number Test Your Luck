@@ -1,0 +1,40 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Guessing Game</title>
+</head>
+<body>
+
+<div id = "message">Welcome to mini game guessing</div>
+
+<input id = "number">
+
+<button id="guessButoon"> Guess </button>
+
+<script>
+    let button = document.getElementById('guessButoon');
+    button.addEventListener('click',function () {
+        var result = Math.floor(Math.random() * 10);
+        var userGuess = parseInt(document.getElementById('number').value);
+        for ( let i = 0; i < 10; i++){
+            if (result == userGuess){
+                var output = document.getElementById('message').innerHTML;
+                output = 'Congratulations!! You guessed correctly';
+                console.log(output);
+                break;
+            }
+            else if ( result < userGuess){
+                output = 'Sorry your guess is too low';
+                console.log(output);
+                userGuess = parseInt(document.getElementById('number').value);
+            }
+            else{
+                output = 'Sorry your guess is too high';
+                console.log(output);
+                userGuess = parseInt(document.getElementById('number').value);
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
